@@ -8,7 +8,7 @@ class AColors {
   static const Color red   = Colors.red;
   static const Color grey  = Colors.grey;
 
-  static const Color primaryClr = Color(0xffFF7C67);
-  static const Color greenClr   = Color(0xff2FAA7A);
+  static const Color primaryClr = Color(0xff0D4A9C);
+  static const Color greenClr   = Color(0xff348337);
   static const Color iconColor  = Color(0xFFDADADA);
 }
