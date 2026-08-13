@@ -1,9 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:power_tools_renting_app/app/utils/colors.dart';
 import 'package:power_tools_renting_app/app/utils/strings.dart';
-import 'package:power_tools_renting_app/screens/login/login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,21 +10,17 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  late Animation<double> _fadeAnimation;
+  late Animation<double> _scaleAnimation;
+  late Animation<Offset> _slideAnimation;
+
   @override
   void initState() {
     super.initState();
-<<<<<<< Updated upstream
-    Timer(const Duration(seconds: 5), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) {
-            return LoginScreen();
-          },
-        ),
-      );
-=======
 
     _controller = AnimationController(
       vsync: this,
@@ -64,26 +58,18 @@ class _SplashScreenState extends State<SplashScreen> {
       //     },
       //   ),
       // );
->>>>>>> Stashed changes
     });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< Updated upstream
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Center(
-          child: Text(
-            kAppName,
-            style: TextStyle(
-              fontSize: 24,
-              color: AColors.primaryClr,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-=======
       backgroundColor: AColors.backgroundClr,
       body: SafeArea(
         child: Stack(
@@ -154,7 +140,6 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ],
->>>>>>> Stashed changes
         ),
       ),
     );
